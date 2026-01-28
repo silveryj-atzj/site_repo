@@ -1,0 +1,19 @@
+name: Deploy
+on:
+  push:
+    branches: [ main ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.AZURE_NAME }}
+          username: ${{ secrets.AZURE_USER }}
+          key: ${{ secrets.AZURE_KEY }}
+          script: |
+            cd /var/www/html
+            # 即使是公开仓库，服务器上也建议用 HTTPS pull 或者直接强制更新
+            sudo git fetch --all
+            sudo git reset --hard origin/main
