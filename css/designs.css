@@ -1,0 +1,29 @@
+/* 基础重置 */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex; /* 关键：让整个页面变成横向排列 */
+}
+
+/* 侧边栏固定在左边 */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed; /* 固定住，不随滚动条滚动 */
+    background: #f4f4f4;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+/* 主内容区偏移出 250px */
+.content-wrapper {
+    margin-left: 250px; /* 必须等于 sidebar 的宽度 */
+    padding: 40px;
+    width: 100%;
+}
+
+footer {
+    margin-top: 50px;
+    color: #888;
+    font-size: 0.8rem;
+}

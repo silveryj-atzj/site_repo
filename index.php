@@ -1,16 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>银橘の站</title>
-</head>
+<?php 
+    // 把头部拉进来
+    include '_header.php'; 
+?>
 
-<body>
-    <h1>欢迎来到银橘の站</h1>
+<main>
+    <h1>欢迎来到我的站点</h1>
+    <p>受到 motherfuckingwebsite.com 的启发，我决定保持简洁。</p>
+    <p>这是我的双栏布局实验。</p>
+</main>
 
-    <h1>Hello, Auto Deploy Testing</h1>\
-
-    <h1>JIA CHEN</h1>
-    <a href="Furina @salgu.jpg">Example Link</a>
-</body>
+<?php 
+    // 把尾部拉进来
+    include '_footer.php'; 
+?>
